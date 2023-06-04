@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/payee_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/payee_dropdown_prompt" />
+
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/date_label" />
+            <TextView
+                android:id="@+id/pick_date_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick a date:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="16dp" />
+
+
+            <DatePicker
+                android:id="@+id/date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="calendar"
+                android:spinnersShown="true"
+                android:calendarViewShown="false" />
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/time_label" />
+            <TextView
+                android:id="@+id/pick_time_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick a time:"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp" />
+
+            <TimePicker
+                android:id="@+id/time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner" />
+
+            <EditText
+                android:id="@+id/notes_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/notes_hint"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/add_reminder_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_reminder_button_label" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

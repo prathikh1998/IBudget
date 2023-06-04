@@ -12,6 +12,7 @@
         android:id="@+id/payee_info_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/payee_website_input"
         app:layout_constraintTop_toBottomOf="@+id/payee_website_input">
 
@@ -31,36 +32,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginBottom="39dp"
             android:text="Tags"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/type_text" />
+            app:layout_constraintBottom_toTopOf="@+id/payee_notes_text"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/payee_website_input"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="291dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="291dp"
+            android:layout_marginEnd="15dp"
+            android:editable="false"
             android:ems="10"
             android:hint="www.google.com"
-            android:inputType="text"
-            app:layout_constraintBottom_toTopOf="@+id/payee_notes_text"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/address_text" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/payee_phone_input"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginTop="64dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="14dp"
             android:layout_marginBottom="64dp"
+            android:editable="false"
             android:ems="10"
             android:hint="###-###-#####"
-            android:inputType="phone"
             app:layout_constraintBottom_toBottomOf="@+id/payee_account_input"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/payee_address_input" />
@@ -70,11 +69,11 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="14dp"
             android:layout_marginBottom="16dp"
+            android:editable="false"
             android:ems="10"
             android:hint="Netflix, Walmart, etc."
-            android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/payee_address_input"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -85,16 +84,16 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="22dp"
-            android:layout_marginBottom="11dp"
+            android:layout_marginBottom="20dp"
             android:background="#ebedeb"
+            android:editable="false"
             android:ems="10"
             android:gravity="start|top"
             android:hint="Leave some notes..."
-            android:inputType="textMultiLine"
             android:paddingTop="8dp"
             android:textAlignment="textStart"
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/add_payee_confirm_button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/payee_tags_input"
             app:layout_constraintStart_toStartOf="@+id/payee_tags_input"
             app:layout_constraintTop_toBottomOf="@+id/payee_tags_input" />
@@ -125,10 +124,10 @@
             android:id="@+id/payee_account_input"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="14dp"
+            android:editable="false"
             android:ems="10"
             android:hint="123456789"
-            android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/account_number_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/account_number_text" />
@@ -137,26 +136,26 @@
             android:id="@+id/payee_type_input"
             android:layout_width="0dp"
             android:layout_height="48dp"
-            android:layout_marginTop="61dp"
-            android:layout_marginBottom="64dp"
-            app:layout_constraintBottom_toBottomOf="@+id/payee_tags_input"
+            android:layout_marginTop="198dp"
+            android:layout_marginBottom="198dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/payee_term_length_input"
             app:layout_constraintStart_toStartOf="@+id/payee_term_length_input"
-            app:layout_constraintTop_toTopOf="@+id/payee_term_length_input" />
+            app:layout_constraintTop_toBottomOf="@+id/payee_bill_duedate_input" />
 
         <EditText
             android:id="@+id/payee_email_input"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="228dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="228dp"
+            android:layout_marginTop="63dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="62dp"
+            android:editable="false"
             android:ems="10"
             android:hint="abc@mail.com"
-            android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/payee_notes_text"
+            app:layout_constraintBottom_toBottomOf="@+id/payee_term_length_input"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/account_number_text" />
+            app:layout_constraintTop_toTopOf="@+id/payee_website_input" />
 
         <TextView
             android:id="@+id/phone_number_text"
@@ -185,11 +184,11 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginTop="99dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="15dp"
             android:layout_marginBottom="99dp"
+            android:editable="false"
             android:ems="10"
             android:hint="monthly, yearly, etc."
-            android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/tags_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/website_url_text" />
@@ -221,13 +220,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="107dp"
-            android:layout_marginBottom="106dp"
+            android:layout_marginBottom="71dp"
             android:text="Notes"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/type_text" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/name_text"
@@ -251,26 +248,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/emal_text" />
 
-        <Button
-            android:id="@+id/add_payee_confirm_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add Payee"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
         <EditText
             android:id="@+id/payee_bill_amount_input"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginTop="190dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="15dp"
             android:layout_marginBottom="190dp"
+            android:editable="false"
             android:ems="10"
             android:hint="0.0"
-            android:inputType="numberDecimal|numberSigned"
-            android:text="0.0"
             app:layout_constraintBottom_toBottomOf="@+id/emal_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/payee_address_input" />
@@ -290,26 +277,26 @@
             android:id="@+id/payee_tags_input"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="123dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="125dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="63dp"
+            android:editable="false"
             android:ems="10"
             android:hint="groceries, stream, etc."
-            android:inputType="text"
-            app:layout_constraintBottom_toTopOf="@+id/add_payee_confirm_button"
+            app:layout_constraintBottom_toBottomOf="@+id/payee_notes_text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/payee_term_length_input" />
+            app:layout_constraintTop_toTopOf="@+id/payee_type_input" />
 
         <EditText
             android:id="@+id/payee_bill_duedate_input"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginTop="66dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="15dp"
             android:layout_marginBottom="62dp"
+            android:editable="false"
             android:ems="10"
             android:hint="mm/dd/yy"
-            android:inputType="date"
             app:layout_constraintBottom_toBottomOf="@+id/payee_website_input"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/payee_bill_amount_input" />
@@ -319,11 +306,11 @@
             android:layout_width="wrap_content"
             android:layout_height="51dp"
             android:layout_marginTop="39dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="14dp"
             android:layout_marginBottom="38dp"
+            android:editable="false"
             android:ems="10"
             android:hint="123, ABC Dr, Dallas, TX"
-            android:inputType="textPostalAddress"
             app:layout_constraintBottom_toTopOf="@+id/phone_number_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/name_text" />

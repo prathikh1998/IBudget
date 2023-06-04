@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_screen_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <EditText
+        android:id="@+id/search_box"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="24dp"
+        android:background="#ebedeb"
+        android:ems="10"
+        android:hint="Search payment..."
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/balance_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/balance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:text="Total Balance (US Dollars)"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/recent_payment_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance_value" />
+
+    <TextView
+        android:id="@+id/balance_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="0.00"
+        android:textColor="@android:color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/balance_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_box" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recent_payment_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance_text" />
+
+    <TextView
+        android:id="@+id/add_payment_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start adding payment to see them here"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/recent_payment_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

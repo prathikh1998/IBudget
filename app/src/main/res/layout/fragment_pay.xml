@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pay_screen_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false"
+    tools:context=".ui.pay.PayFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="62dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="60dp"
+            android:text="Amount"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/date_text"
+            app:layout_constraintEnd_toStartOf="@+id/amount_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/others_text" />
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="77dp"
+            android:text="On date"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/notes_text"
+            app:layout_constraintEnd_toStartOf="@+id/date_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amount_text" />
+
+        <TextView
+            android:id="@+id/notes_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="60dp"
+            android:text="Notes"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/add_payment_btn"
+            app:layout_constraintEnd_toStartOf="@+id/notes_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_text" />
+
+        <TextView
+            android:id="@+id/payee_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="71dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="62dp"
+            android:text="Pay to"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/others_text"
+            app:layout_constraintEnd_toStartOf="@+id/payee_dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/others_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="56dp"
+            android:text="Other Payee"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/amount_text"
+            app:layout_constraintEnd_toStartOf="@+id/others_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payee_text" />
+
+        <Spinner
+            android:id="@+id/payee_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="28dp"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/others_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/payee_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/date_input"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="30dp"
+            android:ems="10"
+            android:hint="mm/dd/yy"
+            android:inputType="date"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/notes_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/date_text"
+            app:layout_constraintTop_toBottomOf="@+id/amount_input" />
+
+        <Button
+            android:id="@+id/add_payment_btn"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="150dp"
+            android:text="Add Payment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notes_text" />
+
+        <EditText
+            android:id="@+id/amount_input"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="28dp"
+            android:ems="10"
+            android:hint="+/- 0.00"
+            android:textAlignment="center"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintBottom_toTopOf="@+id/date_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/amount_text"
+            app:layout_constraintTop_toBottomOf="@+id/others_input" />
+
+        <EditText
+            android:id="@+id/others_input"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="26dp"
+            android:ems="10"
+            android:hint="External Source"
+            android:inputType="textAutoComplete"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/amount_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/others_text"
+            app:layout_constraintTop_toBottomOf="@+id/payee_dropdown" />
+
+        <EditText
+            android:id="@+id/notes_input"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="237dp"
+            android:background="#ebedeb"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Leave some notes..."
+            android:inputType="textMultiLine"
+            android:paddingTop="8dp"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/notes_text"
+            app:layout_constraintTop_toBottomOf="@+id/date_input" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
